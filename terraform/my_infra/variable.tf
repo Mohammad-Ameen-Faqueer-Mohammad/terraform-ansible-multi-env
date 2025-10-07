@@ -1,16 +1,14 @@
-varibale "env" {
+variable "env" {
     description = "This is the environment name (Dev/Staging/Prod)"
     type = string
 }
 
-variable "instance_type"
-{
+variable "instance_type"{
   description = " this for AWS t2.micro/medium"
   type = string
 }
 
-variable "instance_count"
-{
+variable "instance_count"{
   description = " this no of instances"
   type = number
 }
