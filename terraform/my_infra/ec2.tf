@@ -48,13 +48,13 @@ resource "aws_key_pair" "my_key" {
 }
 
 resource "aws_instance" "amin_terraform_instance" {
-  ami                    = "ami-02d26659fd82cf299" # Replace with a valid Ubuntu AMI ID
-  instance_type          = "t3.micro"
+  ami                    = var.ami# Replace with a valid Ubuntu AMI ID
+  instance_type          =  var.instance_type
   key_name               = aws_key_pair.my_key.key_name
   vpc_security_group_ids = [aws_security_group.my_sg.id]
 
   root_block_device {
-    volume_size = 8
+    volume_size = var.volume_size
     volume_type = "gp3"
   }
 
