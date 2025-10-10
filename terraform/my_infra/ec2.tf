@@ -1,7 +1,7 @@
 resource "aws_default_vpc" "default" {}
 
 resource "aws_security_group" "my_sg" {
-  name        = "my_sg"
+  name        = "${var.env}-my_sg"
   description = "${var.env}My security group"
   vpc_id      = aws_default_vpc.default.id
 
