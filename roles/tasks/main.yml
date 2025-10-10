@@ -10,3 +10,7 @@
   service:
     name: nginx
     Enabled: yes   
+- name: deploye webpage
+  copy: 
+    src: index.html
+    dest: /var/www/html
