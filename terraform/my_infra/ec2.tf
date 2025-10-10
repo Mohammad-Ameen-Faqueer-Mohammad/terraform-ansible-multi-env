@@ -41,7 +41,9 @@ resource "aws_security_group" "my_sg" {
     Environment = var.env
   }
 }
-
+resource "random_id" "suffix" {
+  byte_length = 4
+}
 resource "aws_key_pair" "my_key" {
   key_name   = "${var.env}my-key-terra"
   public_key = file("~/.ssh/my-key.pub")
