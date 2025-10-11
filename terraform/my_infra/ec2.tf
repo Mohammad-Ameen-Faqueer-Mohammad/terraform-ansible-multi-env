@@ -50,7 +50,7 @@ resource "aws_key_pair" "my_key" {
 }
 
 resource "aws_instance" "amin_terraform_instance" {
-  count                  = var.count
+  count                  = var.instance_count
   ami                    = var.ami# Replace with a valid Ubuntu AMI ID
   instance_type          =  var.instance_type
   key_name               = aws_key_pair.my_key.key_name
