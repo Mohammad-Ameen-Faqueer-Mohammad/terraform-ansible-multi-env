@@ -1,6 +1,7 @@
-
 [servers]
-server1 ansible_host=65.2.122.179
-server1 ansible_user=ubuntu
-server1 ansible_python_interpreter=/usr/bin/python3
-server1 ansible_ssh_private_key_file=~/ansible/my-key
+server1 ansible_host=13.203.77.193
+
+[servers:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=~/ansible/my-key
+ansible_python_interpreter=/usr/bin/python3
