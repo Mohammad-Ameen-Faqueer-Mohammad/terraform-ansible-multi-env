@@ -49,7 +49,7 @@ resource "aws_key_pair" "my_key" {
   public_key = file("~/.ssh/my-key.pub")
 }
 
-resource "aws_instance" "amin_terraform_instance" {
+resource "aws_instance" "my_instance" {
   count                  = var.instance_count
   ami                    = var.ami# Replace with a valid Ubuntu AMI ID
   instance_type          =  var.instance_type
