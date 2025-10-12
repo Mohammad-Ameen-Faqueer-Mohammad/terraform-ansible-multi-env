@@ -62,6 +62,6 @@ resource "aws_instance" "my_instance" {
   }
 
   tags = {
-    Name = "Ameeen Instance from TERRAFORM"
+    Name = "${var.env} -EC2 from TF"
   }
 }
